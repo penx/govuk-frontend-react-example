@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import ReactDOM from "react-dom";
-import { Header } from "govuk-frontend-react";
+import Header from "govuk-frontend-react/es/components/header";
 import "./styles.css";
 
 const LazySection = React.lazy(() => import('./lazy'));
