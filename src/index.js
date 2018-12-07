@@ -22,7 +22,7 @@ class App extends React.Component {
 
     return (
       <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename="govuk-frontend-react-example">
         <React.Fragment>
           <Header
             productName="React"
