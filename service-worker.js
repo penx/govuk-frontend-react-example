@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/govuk-frontend-react-example/precache-manifest.50801cad6ee24f46c8589cd1d76815be.js"
+  "/govuk-frontend-react-example/precache-manifest.3bf42080f34ad6dcd3e18c10a49cc495.js"
 );
 
 workbox.clientsClaim();
