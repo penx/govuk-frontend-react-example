@@ -31,6 +31,7 @@ class App extends React.Component {
               <Header.Navigation>
                 <Header.NavigationItem as={Link} to="/">Home</Header.NavigationItem>
                 <Header.NavigationItem as={Link} to="/about">About</Header.NavigationItem>
+                <Header.NavigationItem href="https://github.com/penx/govuk-frontend-react-example">GitHub</Header.NavigationItem>
               </Header.Navigation>
             )}
           />
