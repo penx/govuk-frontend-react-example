@@ -1,0 +1,1 @@
+{"version":3,"sources":["/Users/penx/Development/govuk-frontend-react-example/src/styles.css"],"names":[],"mappings":"AAAA,KAEE,QAAU,CACX,AAED,KACE,sBAAwB,CACzB","file":"main.fb2d78cf.chunk.css","sourcesContent":["body {\n  /* TODO: does govuk-frontend use/recommend a CSS reset? */\n  margin: 0;\n}\n\n.App {\n  font-family: sans-serif;\n}\n"]}
