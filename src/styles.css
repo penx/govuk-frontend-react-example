@@ -1,3 +1,8 @@
+body {
+  /* TODO: does govuk-frontend use/recommend a CSS reset? */
+  margin: 0;
+}
+
 .App {
   font-family: sans-serif;
 }
