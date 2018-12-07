@@ -1,17 +1,32 @@
-import React from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom";
-import { Header, Button } from "govuk-frontend-react";
-
+import { Header } from "govuk-frontend-react";
 import "./styles.css";
 
-function App() {
-  return (
-    <div className="App">
-      <Header />
-      <h1>Hello CodeSandbox</h1>
-      <Button>Start editing to see some magic happen!</Button>
-    </div>
-  );
+const LazySection = React.lazy(() => import('./lazy'));
+
+class App extends React.Component {
+  state = {
+    showSubSection: false
+  }
+
+  handleClick = () => {
+    this.setState({showSubSection: true});
+  }
+  render() {
+    const { showSubSection } = this.state;
+
+    return (
+      <div className="App">
+        <Header />
+        <h1>Hello CodeSandbox</h1>
+        <button onClick={this.handleClick}>Load subsection</button>
+        {showSubSection && <Suspense fallback={<div>Loading...</div>}>
+          <LazySection />
+        </Suspense>}
+      </div>
+    );
+  }
 }
 
 const rootElement = document.getElementById("root");

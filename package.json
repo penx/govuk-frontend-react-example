@@ -6,8 +6,8 @@
   "dependencies": {
     "govuk-frontend-react": "0.0.8",
     "node-sass": "^4.10.0",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
     "react-scripts": "^2.0.3"
   },
   "devDependencies": {},
