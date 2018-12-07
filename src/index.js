@@ -25,6 +25,7 @@ class App extends React.Component {
       <BrowserRouter>
         <React.Fragment>
           <Header
+            productName="React"
             homepage={{ to: '/', as: Link }}
             navigation={(
               <Header.Navigation>
@@ -33,17 +34,25 @@ class App extends React.Component {
               </Header.Navigation>
             )}
           />
-          <h1>
-            <Switch>
-              <Route exact path="/" render={() => 'Home'} />
-              <Route path="/about" render={() => 'About'} />
-              <Route render={() => '404'} />
-            </Switch>
-          </h1>
-          <button onClick={this.handleClick}>Load subsection</button>
-          {showSubSection && <Suspense fallback={<div>Loading...</div>}>
-            <LazySection />
-          </Suspense>}
+          <div style={{margin: '0 auto', maxWidth: '900px', padding: '0 30px'}}>
+            <h1>
+              <Switch>
+                <Route exact path="/" render={() => 'Home'} />
+                <Route path="/about" render={() => 'About'} />
+                <Route render={() => '404'} />
+              </Switch>
+            </h1>
+            <p>
+              This is proof of concept, showing how govuk-frontend can be used as
+              CSS modules via a set of React components, in a way that is compatible
+              with create-react-app, with support for tree shaking and lazy loading.
+            </p>
+
+            <button onClick={this.handleClick}>Load subsection</button>
+            {showSubSection && <Suspense fallback={<div>Loading...</div>}>
+              <LazySection />
+            </Suspense>}
+          </div>
 
         </React.Fragment>
       </BrowserRouter>
