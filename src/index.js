@@ -33,16 +33,18 @@ class App extends React.Component {
               </Header.Navigation>
             )}
           />
-          <h1>Example</h1>
+          <h1>
+            <Switch>
+              <Route exact path="/" render={() => 'Home'} />
+              <Route path="/about" render={() => 'About'} />
+              <Route render={() => '404'} />
+            </Switch>
+          </h1>
           <button onClick={this.handleClick}>Load subsection</button>
           {showSubSection && <Suspense fallback={<div>Loading...</div>}>
             <LazySection />
           </Suspense>}
-          <Switch>
-            <Route exact path="/" render={() => 'Home'} />
-            <Route path="/about" render={() => 'About'} />
-            <Route render={() => '404'} />
-          </Switch>
+
         </React.Fragment>
       </BrowserRouter>
 
