@@ -6,7 +6,7 @@
   "main": "src/index.js",
   "dependencies": {
     "govuk-frontend-react": "0.0.12",
-    "node-sass": "^4.10.0",
+    "node-sass": "^4.11.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-router-dom": "^4.3.1",
